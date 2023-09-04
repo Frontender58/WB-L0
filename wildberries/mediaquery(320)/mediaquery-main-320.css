@@ -1,4 +1,4 @@
-@media (width: 320px) {
+@media (width <= 320px) {
   body {
     width: 320px;
     height: 2932px;
@@ -55,13 +55,48 @@
     padding-left: 131px;
   }
 
-  .main__all-input {
+  .main__all-checkbox {
     width: 22px;
     height: 22px;
   }
 
+  .top-checkbox {
+    display: none;
+  }
+
+  .top-checkbox__label {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    background-color: #f6f6fa;
+    border: 1px solid #00000033;
+    box-sizing: border-box;
+    border-radius: 6px;
+  }
+  .top-checkbox__label::before {
+    content: " ";
+    position: absolute;
+    top: 5.32px;
+    left: 5.26px;
+    width: 22px;
+    height: 22px;
+    background-image: url(./images/arrow-yes-mobile.png);
+    display: none;
+    background-repeat: no-repeat;
+  }
+
+  .top-checkbox:checked + .top-checkbox__label::before {
+    display: block;
+  }
+
   .main__all-text {
     line-height: 24px;
+  }
+
+  .checkbox-labelTop {
+    display: none;
   }
 
   /* FIRST MOBILE */
@@ -85,23 +120,77 @@
   }
 
   .tshirt__container-mobile__img {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+    padding-left: 3px;
     background-image: url("images/tshirt-first.png");
     width: 80px;
     height: 106px;
   }
 
-  .tshirt__container-mobile__img-input {
-    position: relative;
+  .tshirt__container-mobile__img-block {
     width: 22px;
     height: 22px;
   }
 
-  .tshirt__container-mobile__img-text {
-    position: relative;
+  .tshirt__container-mobile__img-block__input {
+    display: none;
+  }
+
+  .tshirt__container-mobile__img-block__label {
     width: 22px;
     height: 22px;
-    top: 80px;
-    right: 25px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    background-color: #cb11ab;
+    border: 1px solid #00000033;
+    box-sizing: border-box;
+    border-radius: 6px;
+  }
+  .tshirt__container-mobile__img-block__label::before {
+    content: " ";
+    position: absolute;
+    top: 5.32px;
+    left: 5.26px;
+    width: 22px;
+    height: 22px;
+    background-image: url(./images/arrow-yes-mobile.png);
+    display: none;
+    background-repeat: no-repeat;
+  }
+
+  .tshirt__container-mobile__img-block__input:checked
+    + .tshirt__container-mobile__img-block__label::before {
+    display: block;
+  }
+
+  .tshirt__container-mobile__img-checkbox {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+
+  .tshirt__container-mobile__img-checkbox__custom {
+    display: none;
+  }
+
+  .tshirt__container-mobile__img-checkbox__custom-span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    user-select: none;
   }
 
   .tshirt__container-mobile__text {
@@ -408,9 +497,49 @@
   }
 
   .tshirt__SecondContainer-mobile__img {
-    background-image: url("images/mobile-second.jpg");
+    background-image: url(images/mobile-second.jpg);
+    padding-left: 3px;
+    padding-top: 4px;
     width: 80px;
     height: 106px;
+    box-sizing: border-box;
+  }
+
+  .tshirt__SecondContainer-mobile__img-block {
+    width: 22px;
+    height: 22px;
+  }
+
+  .tshirt__SecondContainer-mobile__img-block__input {
+    display: none;
+  }
+
+  .tshirt__SecondContainer-mobile__img-block__label {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    background-color: #cb11ab;
+    border: 1px solid #00000033;
+    box-sizing: border-box;
+    border-radius: 6px;
+  }
+  .tshirt__SecondContainer-mobile__img-block__label::before {
+    content: " ";
+    position: absolute;
+    top: 5.32px;
+    left: 5.26px;
+    width: 22px;
+    height: 22px;
+    background-image: url(./images/arrow-yes-mobile.png);
+    display: none;
+    background-repeat: no-repeat;
+  }
+
+  .tshirt__SecondContainer-mobile__img-block__input:checked
+    + .tshirt__SecondContainer-mobile__img-block__label::before {
+    display: block;
   }
 
   .tshirt__SecondContainer-mobile__img-input {
@@ -631,7 +760,7 @@
     left: 53px;
   }
 
-  .SecondCounter {
+  .MobileSecondCounter {
     display: flex;
     align-items: center;
     width: 80px;
@@ -646,8 +775,8 @@
     line-height: 16px;
   }
 
-  #SecondDecrement,
-  #SecondIncrement {
+  #MobileSecondDecrement,
+  #SMobileecondIncrement {
     width: 33.33%;
     height: 100%;
     cursor: pointer;
@@ -656,12 +785,16 @@
     align-items: center;
   }
 
-  #SecondDecrement:hover,
-  #SecondIncrement:hover {
+  #MobileSecondDecrement:hover,
+  #MobileSecondIncrement:hover {
     background-color: #ccc;
   }
 
-  #SecondCount {
+  #MobileSecondIncrement {
+    padding-top: 3px;
+  }
+
+  #MobileSecondCount {
     width: 33.33%;
     text-align: center;
   }
@@ -703,12 +836,46 @@
     background-image: url("images/pencil-third.jpg");
     width: 80px;
     height: 106px;
+    padding-left: 3px;
+    padding-top: 4px;
+    box-sizing: border-box;
   }
 
-  .tshirt__ThirdContainer-mobile__img-input {
-    position: relative;
+  .tshirt__ThirdContainer-mobile__img-checkbox {
     width: 22px;
     height: 22px;
+  }
+
+  .tshirt__ThirdContainer-mobile__img-checkbox__input {
+    display: none;
+  }
+
+  .tshirt__ThirdContainer-mobile__img-checkbox__label {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    background-color: #f6f6fa;
+    border: 1px solid #00000033;
+    box-sizing: border-box;
+    border-radius: 6px;
+  }
+  .tshirt__ThirdContainer-mobile__img-checkbox__label::before {
+    content: " ";
+    position: absolute;
+    top: 5.32px;
+    left: 5.26px;
+    width: 22px;
+    height: 22px;
+    background-image: url(./images/arrow-yes-mobile.png);
+    display: none;
+    background-repeat: no-repeat;
+  }
+
+  .tshirt__ThirdContainer-mobile__img-checkbox__input:checked
+    + .tshirt__ThirdContainer-mobile__img-checkbox__label::before {
+    display: block;
   }
 
   .tshirt__ThirdContainer-mobile__img-text {
@@ -922,7 +1089,7 @@
     left: 53px;
   }
 
-  .ThirdCounter {
+  .MobileThirdCounter {
     display: flex;
     align-items: center;
     width: 80px;
@@ -931,14 +1098,14 @@
     background-color: #ffffff;
   }
 
-  .Thirdundercounter__text {
+  .MobileThirdundercounter__text {
     color: #ff3b30;
     font-size: 13px;
     line-height: 16px;
   }
 
-  #ThirdDecrement,
-  #ThirdIncrement {
+  #MobileThirdDecrement,
+  #MobileThirdIncrement {
     width: 33.33%;
     height: 100%;
     cursor: pointer;
@@ -947,12 +1114,12 @@
     align-items: center;
   }
 
-  #ThirdDecrement:hover,
-  #ThirdIncrement:hover {
+  #MobileThirdDecrement:hover,
+  #MobileThirdIncrement:hover {
     background-color: #ccc;
   }
 
-  #ThirdCount {
+  #MobileThirdCount {
     width: 33.33%;
     text-align: center;
   }
@@ -1015,10 +1182,15 @@
 
   .MobileTshirtBlock__half-img {
     display: flex;
+    flex-direction: column;
+    justify-content: end;
     gap: 12px;
     width: 80px;
     height: 106px;
     background-image: url(images/tshirt-mobile.jpg);
+    padding-bottom: 8px;
+    padding-left: 3px;
+    box-sizing: border-box;
   }
 
   .MobileTshirtBlock__half-text {
@@ -1144,10 +1316,77 @@
 
   .ThirdMobileTshirtBlock__half-img {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 3px;
+    box-sizing: border-box;
     gap: 12px;
     width: 80px;
     height: 106px;
     background-image: url(images/pencil-mobile.jpg);
+  }
+
+  .ThirdMobileTshirtBlock__half-img__block {
+    width: 22px;
+    height: 22px;
+  }
+
+  .ThirdMobileTshirtBlock__half-img__block-input {
+    display: none;
+  }
+
+  .ThirdMobileTshirtBlock__half-img__block-input__label {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    background-color: #f6f6fa;
+    border: 1px solid #00000033;
+    box-sizing: border-box;
+    border-radius: 6px;
+  }
+  .ThirdMobileTshirtBlock__half-img__block-input__label::before {
+    content: " ";
+    position: absolute;
+    top: 5.32px;
+    left: 5.26px;
+    width: 22px;
+    height: 22px;
+    background-image: url(./images/arrow-yes-mobile.png);
+    display: none;
+    background-repeat: no-repeat;
+  }
+
+  .ThirdMobileTshirtBlock__half-img__block-input:checked
+    + .ThirdMobileTshirtBlock__half-img__block-input__labe::before {
+    display: block;
+  }
+
+  .tshirt__container-mobile__img-BottomCheckbox {
+    width: 72px;
+    height: 22px;
+    display: inline-block;
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+
+  .tshirt__container-mobile__img-BottomCheckbox__custom {
+    display: none;
+  }
+
+  .tshirt__container-mobile__img-BottomCheckbox__custom-span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    user-select: none;
   }
 
   .ThirdMobileTshirtBlock__half-text {
@@ -2039,7 +2278,7 @@
     font-size: 16px;
     line-height: 24px;
     color: #9797af;
-    border-bottom: 1px dashed #00000033;
+    border-bottom: 1px solid #00000033;
     box-sizing: border-box;
     padding-left: 0px;
   }
@@ -2070,14 +2309,14 @@
     display: flex;
     flex-direction: column;
     gap: 2px;
-    width: 289px;
-    height: 64px;
+    width: 288px;
+    height: 56px;
   }
 
   .main__MobileOrder-recipient__inside-fullname__half-last__mail-block {
     display: flex;
     gap: 3px;
-    width: 289px;
+    width: 288px;
     height: 27px;
   }
 
@@ -2086,7 +2325,7 @@
     gap: 3px;
     border: none;
     outline: none;
-    width: 289px;
+    width: 288px;
     height: 27px;
     border-bottom: 1px solid #00000033;
     font-size: 16px;
@@ -2513,9 +2752,39 @@
     height: 22px;
   }
 
-  .MobileEdge__total-price__pay-immediately__block_input {
+  .custom-checkbox {
+    display: none;
+  }
+
+  .checkbox-label {
     width: 22px;
     height: 22px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    background-color: #f0ecf4;
+    border: 1px solid #00000033;
+    box-sizing: border-box;
+  }
+
+  .checkbox-label::before {
+    content: " ";
+    position: absolute;
+    top: 5.32px;
+    left: 5.26px;
+    width: 22px;
+    height: 22px;
+    background-image: url("./images/arrow-yes-mobile.png");
+    display: none;
+    background-repeat: no-repeat;
+  }
+
+  .custom-checkbox:checked + .checkbox-label::before {
+    display: block;
+  }
+
+  .tshirt__container-mobile__img-ThirdCheckbox__custom {
+    display: none;
   }
 
   .MobileEdge__total-price__pay-immediately__block-inside {
@@ -2587,5 +2856,42 @@
   .MobileEdge__total-order__rules-text_styled {
     font-size: 13px;
     line-height: 16px;
+  }
+
+  .tabbar-block {
+    width: 28px;
+    height: 28px;
+  }
+
+  .tabbar-block__label {
+    display: flex;
+    position: relative;
+    left: 17px;
+    bottom: 35px;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    padding: 1px 2px 0px 2px;
+    box-sizing: border-box;
+    background-color: #f55123;
+  }
+
+  .tabbar-block__label-inside {
+    display: flex;
+    position: relative;
+    bottom: 1px;
+    width: 20px;
+    height: 16px;
+    border-radius: 16px;
+    padding: 0px 4px 0px 4px;
+    box-sizing: border-box;
+    background-color: #f55123;
+  }
+
+  .tabbar-block__label-inside_text {
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 18px;
+    color: #ffffff;
   }
 }

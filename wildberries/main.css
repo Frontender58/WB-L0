@@ -55,10 +55,52 @@ body {
   gap: 8px;
 }
 
+.top-checkbox {
+  display: none;
+}
+
+.top-checkbox__label {
+  display: none;
+}
+
 .main__all-img {
   padding-left: 491px;
 }
 
+/* ssssssssssssssssssssssssss */
+#checkbox {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.checkbox-labelTop {
+  display: flex;
+  width: 22px;
+  height: 22px;
+  background-color: #cb11ab;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.image-containerTop {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.image-containerTop_img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* ssssssssssssssssssssssssssss */
 #checkbox {
   width: 0;
   height: 0;
@@ -70,10 +112,45 @@ body {
   width: 22px;
   height: 22px;
   background-color: #cb11ab;
+  border-radius: 6px;
   cursor: pointer;
 }
 
 .image-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 19px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.image-container img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#checkbox,
+#checkbox2,
+#checkbox3,
+#checkbox4,
+#checkbox5,
+#checkbox6:checked
+  + .checkbox-label
+  #checkboxImage
+  #checkboxImage2
+  #checkboxImage3
+  #checkboxImage4
+  #checkboxImage5
+  #checkboxImage6 {
+  opacity: 0;
+}
+
+.tshirt__container-mobile__imgtshirt__container-mobile-checkbox {
   display: flex;
   justify-content: center;
   position: relative;
@@ -82,7 +159,7 @@ body {
   height: 100%;
 }
 
-.image-container img {
+.tshirt__container-mobile-checkbox img {
   display: block;
   max-width: 100%;
   max-height: 100%;
@@ -2311,7 +2388,7 @@ body {
   font-size: 16px;
   line-height: 24px;
   color: #9797af;
-  border-bottom: 1px dashed #00000033;
+  border-bottom: 1px solid #00000033;
   box-sizing: border-box;
   padding-left: 0px;
 }
@@ -2367,7 +2444,7 @@ body {
   font-size: 16px;
   line-height: 24px;
   color: #9797af;
-  border-bottom: 1px dashed #00000033;
+  border-bottom: 1px solid #00000033;
   box-sizing: border-box;
   padding-left: 0px;
 }
@@ -2416,7 +2493,7 @@ body {
   outline: none;
   width: 180.67px;
   height: 27px;
-  border-bottom: 1px dashed #00000033;
+  border-bottom: 1px solid #00000033;
   font-size: 16px;
   line-height: 24px;
   color: #9797af;
@@ -2480,7 +2557,7 @@ body {
   height: 24px;
   border: none;
   outline: none;
-  border-bottom: 1px dashed #00000033;
+  border-bottom: 1px solid #00000033;
   padding-left: 0px;
 }
 
@@ -2537,7 +2614,7 @@ body {
   color: #9797af;
   border: none;
   outline: none;
-  border-bottom: 1px dashed #00000033;
+  border-bottom: 1px solid #00000033;
   text-align: start;
 }
 
@@ -2863,6 +2940,77 @@ body {
   width: 22px;
   height: 22px;
 }
+
+.MobileEdge__total-price__pay-immediately__block-image {
+  width: 22px;
+  height: 22px;
+}
+
+.custom-checkbox {
+  display: none;
+}
+
+.checkbox-label {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  background-color: #cb11ab;
+  border: 1px solid #00000033;
+  box-sizing: border-box;
+}
+
+.checkbox-label::before {
+  content: " ";
+  position: absolute;
+  top: 5.32px;
+  left: 5.26px;
+  width: 22px;
+  height: 22px;
+  background-image: url("./images/arrow-yes-mobile.png");
+  display: none;
+  background-repeat: no-repeat;
+}
+
+.edge__total-price__pay-immediately__block-image {
+  width: 22px;
+  height: 22px;
+}
+
+.GreyCheckbox {
+  display: none;
+}
+
+.GreyCheckboxId-label {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  background-color: #f6f6fa;
+  border: 1px solid #00000033;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+.GreyCheckboxId-label::before {
+  content: " ";
+  position: absolute;
+  top: 5.32px;
+  left: 5.26px;
+  width: 22px;
+  height: 22px;
+  background-image: url("./images/yes-checkbox.png");
+  display: none;
+  background-repeat: no-repeat;
+}
+
+.GreyCheckbox:checked + .GreyCheckboxId-label::before {
+  display: block;
+}
+
+/* ssssssssssssssssss */
 
 .edge__total-price__pay-immediately__block_input {
   width: 22px;

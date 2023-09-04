@@ -23,6 +23,14 @@ const blockMobileEdge = document.getElementById("MobileEdge");
 const showMobileDeliveryClick = document.getElementById("MobileDeliveryClick");
 const hiddenMobileDelivery = document.getElementById("MobileDelivery");
 
+showDeliveryClick.addEventListener("click", () => {
+  if (hiddenDeliveryBlock.style.display === "none") {
+    hiddenDeliveryBlock.style.display = "flex";
+  } else {
+    hiddenDeliveryBlock.style.display = "none";
+  }
+});
+
 showMobileDeliveryClick.addEventListener("click", () => {
   if (hiddenMobileDelivery.style.display === "none") {
     hiddenMobileDelivery.style.display = "flex";
