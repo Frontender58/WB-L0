@@ -1,21 +1,25 @@
-const ThirddecrementImage = document.getElementById("thirddecrement");
-const ThirdincrementImage = document.getElementById("thirdincrement");
-const ThirdcountElement = document.getElementById("thirdcount");
+const MobileThirddecrementImage = document.getElementById(
+  "MobileThirdDecrement"
+);
+const MobileThirdincrementImage = document.getElementById(
+  "MobileThirdIncrement"
+);
+const MobileThirdcountElement = document.getElementById("MobileThirdCount");
 
-let thirdcount = 0;
+let Mobilethirdcount = 0;
 
-ThirddecrementImage.addEventListener("click", () => {
-  if (thirdcount > 0) {
-    thirdcount--;
-    updateThirdCount();
+MobileThirddecrementImage.addEventListener("click", () => {
+  if (Mobilethirdcount > 0) {
+    Mobilethirdcount--;
+    updateMobileThirdCount();
   }
 });
 
-ThirdincrementImage.addEventListener("click", () => {
-  thirdcount++;
-  updateThirdCount();
+MobileThirdincrementImage.addEventListener("click", () => {
+  Mobilethirdcount++;
+  updateMobileThirdCount();
 });
 
-function updateThirdCount() {
-  ThirdcountElement.textContent = thirdcount;
+function updateMobileThirdCount() {
+  MobileThirdcountElement.textContent = Mobilethirdcount;
 }

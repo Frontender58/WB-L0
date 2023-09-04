@@ -94,16 +94,26 @@
         <div class="main-basket"><h1 class="main__text">Корзина</h1></div>
         <div class="main__block">
           <div class="main__all">
-            <label for="checkbox" class="checkbox-label">
-              <input type="checkbox" id="checkbox" onclick="toggleCheckbox()" />
-              <div class="image-container">
-                <img
-                  id="checkboxImage"
-                  src="images/yes-checkbox.png"
-                  alt="Image"
+            <div class="main__all-checkbox">
+              <label for="checkbox" class="checkbox-labelTop">
+                <input
+                  type="checkbox"
+                  id="checkbox"
+                  onclick="toggleCheckbox()"
+                  class="checkbox-labelTop__input"
                 />
-              </div>
-            </label>
+                <div class="image-containerTop">
+                  <img
+                    id="checkboxImage2"
+                    src="images/yes-checkbox-2 — копия.png"
+                    alt="Image"
+                    class="image-containerTop_img"
+                  />
+                </div>
+              </label>
+              <input type="checkbox" class="top-checkbox" id="TopCheckbox" />
+              <label for="TopCheckbox" class="top-checkbox__label"></label>
+            </div>
             <p class="main__all-text">Выбрать все</p>
             <div class="main__all-img">
               <img src="images/icon-arrow.png" alt="" />
@@ -113,16 +123,28 @@
           <div class="tshirt__container">
             <div class="tshirt__container-mobile">
               <div class="tshirt__container-mobile__img">
-                <input
-                  type="checkbox"
-                  class="tshirt__container-mobile__img-input"
-                  checked
-                />
-                <input
-                  type="checkbox"
-                  class="tshirt__container-mobile__img-text"
-                  checked
-                />
+                <div class="tshirt__container-mobile__img-block">
+                  <input
+                    type="checkbox"
+                    checked
+                    class="tshirt__container-mobile__img-block__input"
+                    id="TshirtSecondCheckbox"
+                  />
+                  <label
+                    for="TshirtSecondCheckbox"
+                    class="tshirt__container-mobile__img-block__label"
+                  ></label>
+                </div>
+                <label class="tshirt__container-mobile__img-checkbox">
+                  <input
+                    type="checkbox"
+                    class="tshirt__container-mobile__img-checkbox__custom"
+                  />
+                  <span
+                    class="tshirt__container-mobile__img-checkbox__custom-span"
+                    >56</span
+                  >
+                </label>
               </div>
               <div class="tshirt__container-mobile__text">
                 <div class="tshirt__container-mobile__text-first">
@@ -266,16 +288,18 @@
           <div class="tshirt__SecondContainer">
             <div class="tshirt__SecondContainer-mobile">
               <div class="tshirt__SecondContainer-mobile__img">
-                <input
-                  type="checkbox"
-                  class="tshirt__SecondContainer-mobile__img-input"
-                  checked
-                />
-                <input
-                  type="checkbox"
-                  class="tshirt__SecondContainer-mobile__img-text"
-                  checked
-                />
+                <div class="tshirt__SecondContainer-mobile__img-block">
+                  <input
+                    type="checkbox"
+                    checked
+                    class="tshirt__SecondContainer-mobile__img-block__input"
+                    id="TshirtCheckbox"
+                  />
+                  <label
+                    for="TshirtCheckbox"
+                    class="tshirt__SecondContainer-mobile__img-block__label"
+                  ></label>
+                </div>
               </div>
               <div class="tshirt__SecondContainer-mobile__text">
                 <div class="tshirt__SecondContainer-mobile__text-first">
@@ -359,12 +383,12 @@
               </div>
             </div>
             <div class="tshirt__SecondContainer-mobile__footer">
-              <div class="SecondCounter">
-                <div id="SecondDecrement">
+              <div class="MobileSecondCounter">
+                <div id="MobileSecondDecrement">
                   <img src="images/minus.svg" alt="-" />
                 </div>
-                <span id="SecondCount">200</span>
-                <div id="SecondIncrement">
+                <span id="MobileSecondCount">200</span>
+                <div id="MobileSecondIncrement">
                   <img src="images/plus.svg" alt="+" />
                 </div>
               </div>
@@ -500,16 +524,17 @@
           <div class="tshirt__ThirdContainer">
             <div class="tshirt__ThirdContainer-mobile">
               <div class="tshirt__ThirdContainer-mobile__img">
-                <input
-                  type="checkbox"
-                  class="tshirt__ThirdContainer-mobile__img-input"
-                  checked
-                />
-                <input
-                  type="checkbox"
-                  class="tshirt__ThirdContainer-mobile__img-text"
-                  checked
-                />
+                <div class="tshirt__ThirdContainer-mobile__img-checkbox">
+                  <input
+                    type="checkbox"
+                    class="tshirt__ThirdContainer-mobile__img-checkbox__input"
+                    id="BottomCheckbox"
+                  />
+                  <label
+                    for="BottomCheckbox"
+                    class="tshirt__ThirdContainer-mobile__img-checkbox__label"
+                  ></label>
+                </div>
               </div>
               <div class="tshirt__ThirdContainer-mobile__text">
                 <div class="tshirt__ThirdContainer-mobile__text-first">
@@ -585,12 +610,12 @@
             </div>
             <div class="tshirt__ThirdContainer-mobile__footer">
               <div class="tshirt__ThirdContainer-mobile__footer-half">
-                <div class="ThirdCounter">
-                  <div id="ThirdDecrement">
+                <div class="MobileThirdCounter">
+                  <div id="MobileThirdDecrement">
                     <img src="images/minus.svg" alt="-" />
                   </div>
-                  <span id="ThirdCount">1</span>
-                  <div id="ThirdIncrement">
+                  <span id="MobileThirdCount">1</span>
+                  <div id="MobileThirdIncrement">
                     <img src="images/plus.svg" alt="+" />
                   </div>
                 </div>
@@ -695,7 +720,18 @@
           <div class="MobileMain__secondblock-goods">
             <div class="MobileTshirtBlock">
               <div class="MobileTshirtBlock__half">
-                <div class="MobileTshirtBlock__half-img"></div>
+                <div class="MobileTshirtBlock__half-img">
+                  <label class="tshirt__container-mobile__img-checkbox">
+                    <input
+                      type="checkbox"
+                      class="tshirt__container-mobile__img-checkbox__custom"
+                    />
+                    <span
+                      class="tshirt__container-mobile__img-checkbox__custom-span"
+                      >56</span
+                    >
+                  </label>
+                </div>
                 <div class="MobileTshirtBlock__half-text">
                   <p class="MobileTshirtBlock__half-text_styled">
                     Футболка UZcotton мужская <br />Цвет: белый
@@ -740,8 +776,27 @@
             <div class="ThirdMobileTshirtBlock">
               <div class="ThirdMobileTshirtBlock__half">
                 <div class="ThirdMobileTshirtBlock__half-img">
-                  <input type="checkbox" class="" />
-                  <input type="checkbox" class="" />
+                  <div class="ThirdMobileTshirtBlock__half-img__block">
+                    <input
+                      type="checkbox"
+                      class="ThirdMobileTshirtBlock__half-img__block-input"
+                      id="BottomGreyCheckbox"
+                    />
+                    <label
+                      for="BottomGreyCheckbox"
+                      class="ThirdMobileTshirtBlock__half-img__block-input__label"
+                    ></label>
+                  </div>
+                  <label class="tshirt__container-mobile__img-BottomCheckbox">
+                    <input
+                      type="checkbox"
+                      class="tshirt__container-mobile__img-BottomCheckbox__custom"
+                    />
+                    <span
+                      class="tshirt__container-mobile__img-BottomCheckbox__custom-span"
+                      >56/54/52...</span
+                    >
+                  </label>
                 </div>
                 <div class="ThirdMobileTshirtBlock__half-text">
                   <p class="ThirdMobileTshirtBlock__half-text_styled">
@@ -834,7 +889,7 @@
               <div class="pencil__block-last">
                 <div class="pencil__block-last_half">
                   <div class="pencil__block-last_half-images">
-                    <img src="images/love.png" alt="" />
+                    <img src="images/love.png" alt="" id="LoveImg" />
                     <img src="images/trashcan.png" alt="" />
                   </div>
                 </div>
@@ -1397,7 +1452,7 @@
             </div>
 
             <!-- MOBILE main__MobileOrder-recipient -->
-            <div class="main__MobileOrder-recipient">
+            <form id="myForm" class="main__MobileOrder-recipient">
               <div class="main__MobileOrder-recipient__inside">
                 <p class="main__MobileOrder-recipient__inside-text">
                   Получатель
@@ -1418,20 +1473,19 @@
                   <div
                     class="main__MobileOrder-recipient__inside-fullname__half-name__block"
                   >
-                    <form action="">
-                      <input
-                        type="text"
-                        placeholder="Имя"
-                        id="Name"
-                        class="main__MobileOrder-recipient__inside-fullname__half-name__block-input"
-                      />
-                    </form>
+                    <input
+                      type="text"
+                      placeholder="Имя"
+                      id="firstName"
+                      class="main__MobileOrder-recipient__inside-fullname__half-name__block-input"
+                    />
                     <div
                       class="main__MobileOrder-recipient__inside-fullname__half-name__block-mistake"
                       id="NameMistake"
                     >
                       <p
                         class="main__MobileOrder-recipient__inside-fullname__half-name__block-mistake_text"
+                        id="nameErrorMessage"
                       ></p>
                     </div>
                   </div>
@@ -1450,20 +1504,18 @@
                   <div
                     class="main__MobileOrder-recipient__inside-fullname__half-surname__block"
                   >
-                    <form action="">
-                      <input
-                        type="text"
-                        placeholder="Фамилия"
-                        id="Name"
-                        class="main__MobileOrder-recipient__inside-fullname__half-surname__block-input"
-                      />
-                    </form>
+                    <input
+                      type="text"
+                      placeholder="Фамилия"
+                      id="lastName"
+                      class="main__MobileOrder-recipient__inside-fullname__half-surname__block-input"
+                    />
                     <div
                       class="main__MobileOrder-recipient__inside-fullname__half-surname__block-mistake"
-                      id="NameMistake"
                     >
                       <p
                         class="main__MobileOrder-recipient__inside-fullname__half-surname__block-mistake_text"
+                        id="lastnameErrorMessage"
                       ></p>
                     </div>
                   </div>
@@ -1480,6 +1532,7 @@
                     <input
                       type="text"
                       placeholder="Почта"
+                      id="emailInput"
                       class="main__MobileOrder-recipient__inside-fullname__half-last__mail-block__input"
                     />
                   </div>
@@ -1488,6 +1541,7 @@
                   >
                     <p
                       class="main__MobileOrder-recipient__inside-fullname__half-last__mail-block__mistake-text"
+                      id="emailErrorMessage"
                     ></p>
                   </div>
                 </div>
@@ -1511,14 +1565,17 @@
                     >
                       <input
                         type="text"
+                        id="phoneInput"
                         class="main__MobileOrder-recipient__inside-fullname__half-last__phone-last__inside-input"
                         placeholder="+7 988 123-45-67"
+                        required
                       />
                       <div
                         class="main__MobileOrder-recipient__inside-fullname__half-last__phone-last__mistake"
                       >
                         <p
                           class="main__MobileOrder-recipient__inside-fullname__half-last__phone-last__mistake-text"
+                          id="phoneErrorMessage"
                         ></p>
                       </div>
                     </div>
@@ -1544,6 +1601,7 @@
                       <input
                         type="text"
                         placeholder="ИНН"
+                        id="innInput"
                         class="main__MobileOrder-recipient__inside-fullname__half-last__INN-block__field-inside__input"
                       />
                     </div>
@@ -1552,6 +1610,7 @@
                     >
                       <p
                         class="main__MobileOrder-recipient__inside-fullname__half-last__INN-block__field-inside_text"
+                        id="innErrorMessage"
                       >
                         Для таможенного оформления
                       </p>
@@ -1559,7 +1618,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </form>
             <!-- END MOBILE main__MobileOrder-recipient -->
           </div>
           <!--END MAIN__MOBILEORDER-DELIVERY -->
@@ -2316,15 +2375,13 @@
                 <div
                   class="MobileEdge__total-price__pay-immediately__block-image"
                 >
-                  <label
-                    for=""
-                    class="MobileEdge__total-price__pay-immediately__block-image_label"
-                  >
-                    <input
-                      type="checkbox"
-                      class="MobileEdge__total-price__pay-immediately__block_input"
-                    />
-                  </label>
+                  <input
+                    type="checkbox"
+                    class="custom-checkbox"
+                    id="myCheckbox"
+                    onclick="changeMobileButtonText()"
+                  />
+                  <label for="myCheckbox" class="checkbox-label"></label>
                 </div>
                 <div
                   class="MobileEdge__total-price__pay-immediately__block-inside"
@@ -2345,15 +2402,18 @@
           </div>
         </div>
         <div class="MobileEdge__total-order">
-          <form id="mainForm">
-            <button type="submit" class="MobileEdge__total-order__button">
-              <div class="MobileEdge__total-order__button-text">
-                <p class="MobileEdge__total-order__button-text_styled">
-                  Заказать
-                </p>
-              </div>
-            </button>
-          </form>
+          <button
+            onclick="submitCredentialsForm()"
+            type="submit"
+            class="MobileEdge__total-order__button"
+            id="MobileBooking"
+          >
+            <div class="MobileEdge__total-order__button-text">
+              <p class="MobileEdge__total-order__button-text_styled">
+                Заказать
+              </p>
+            </div>
+          </button>
           <div class="MobileEdge__total-order__rules">
             <div class="MobileEdge__total-order__rules_image">
               <img src="images/arrowonwhite.png" alt="" />
@@ -2466,17 +2526,16 @@
               <div class="edge__total-price__pay-immediately">
                 <div class="edge__total-price__pay-immediately__block">
                   <div class="edge__total-price__pay-immediately__block-image">
+                    <input
+                      type="checkbox"
+                      class="GreyCheckbox"
+                      id="GreyCheckboxId"
+                      onclick="changeButtonText()"
+                    />
                     <label
-                      for=""
-                      class="edge__total-price__pay-immediately__block-image_label"
-                    >
-                      <input
-                        type="checkbox"
-                        class="edge__total-price__pay-immediately__block_input"
-                        id="Writeoff"
-                        onclick="changeButtonText()"
-                      />
-                    </label>
+                      for="GreyCheckboxId"
+                      class="GreyCheckboxId-label"
+                    ></label>
                   </div>
                   <div class="edge__total-price__pay-immediately__block-inside">
                     <p
@@ -2495,18 +2554,16 @@
             </div>
           </div>
           <div class="edge__total-order">
-            <form action="">
-              <button
-                type="submit"
-                class="edge__total-order__button"
-                id="booking"
-                onclick="changeButtonText()"
-              >
-                <div class="edge__total-order__button-text">
-                  <p class="edge__total-order__button-text_styled">Заказать</p>
-                </div>
-              </button>
-            </form>
+            <button
+              onclick="submitCredentialsForm()"
+              type="submit"
+              class="edge__total-order__button"
+              id="booking"
+            >
+              <div class="edge__total-order__button-text">
+                <p class="edge__total-order__button-text_styled">Заказать</p>
+              </div>
+            </button>
             <div class="edge__total-order__rules">
               <div class="edge__total-order__rules_image">
                 <img src="images/arrowonwhite.png" alt="" />
@@ -2535,6 +2592,7 @@
         </div>
       </div>
     </footer>
+
     <div class="tabbar">
       <div>
         <img src="mediaquery(320)/images/home-mobile.png" alt="" />
@@ -2542,8 +2600,13 @@
       <div>
         <img src="mediaquery(320)/images/catalog-profile.png" alt="" />
       </div>
-      <div>
-        <img src="mediaquery(320)/images/cart-mobile.png" alt="" />
+      <div class="tabbar-block">
+        <img src="mediaquery(320)/images/cart-mobile.png" alt="" id="Cart" />
+        <label for="Cart" class="tabbar-block__label">
+          <div class="tabbar-block__label-inside">
+            <p class="tabbar-block__label-inside_text">3</p>
+          </div>
+        </label>
       </div>
       <div>
         <img src="mediaquery(320)/images/love-mobile.png" alt="" />
@@ -2552,15 +2615,18 @@
         <img src="mediaquery(320)/images/profile-mobile.png " alt="" />
       </div>
     </div>
+
     <script src="JavaScript/prettier.json"></script>
     <script src="JavaScript/ThirdCounter.js"></script>
     <script src="JavaScript/SecondCounter.js"></script>
-    <script src="JavaScript/NameSurname.js"></script>
     <script src="JavaScript/main.js"></script>
     <script src="JavaScript/InformationHoisting.js"></script>
     <script src="JavaScript/FirstCounter.js"></script>
     <script src="JavaScript/checkbox.js"></script>
     <script src="JavaScript/ChangeText.js"></script>
     <script src="JavaScript/ChangeImg.js"></script>
+    <script src="JavaScript/MobileFIrstCounter.js"></script>
+    <script src="JavaScript/MobileSecondCounter.js"></script>
+    <script src="JavaScript/MobileThirdCounter.js"></script>
   </body>
 </html>
